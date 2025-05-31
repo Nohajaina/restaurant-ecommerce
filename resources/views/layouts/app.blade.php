@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{asset('assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/boxicons-master/css/boxicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    @livewireStyles
     <title>{{$title}}</title>
 </head>
 <body>
@@ -43,5 +44,6 @@
     <script src="{{asset('assets/js/jquery-3.5.1.js')}}"></script>
     <script src="{{asset('assets/bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/boxicons-master/dist/boxicons.js')}}"></script>
+    @livewireScripts
 </body>
 </html>
