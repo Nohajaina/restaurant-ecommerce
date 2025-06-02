@@ -9,7 +9,18 @@
    </section>
    <div class="box"></div>
    <section class="menu">
-        <div class="container">
+        <div class="container mt-5">
+            <h2 class="mb-4">Nos menus</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <livewire:menu-list />
+                </div>
+                <div class="col-md-4">
+                    <livewire:panier />
+                </div>
+            </div>
+        </div>
+        {{-- <div class="container">
             <div class="row">
                 <div class="col-md-6 bg-light shadow p-2">
                     <div class="row">
@@ -28,6 +39,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
    </section>
+   
 @endsection
