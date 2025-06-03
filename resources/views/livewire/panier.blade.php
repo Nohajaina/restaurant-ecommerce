@@ -1,13 +1,11 @@
-<div class="card">
-    <div class="card-header">🛒 Panier</div>
-    <div class="card-body">
-        @forelse ($articles as $article)
-            <div class="d-flex justify-content-between">
-                <div>{{ $article->nom }} ({{ $panier[$article->id] }})</div>
-                <button wire:click="retirerDuPanier({{ $article->id }})" class="btn btn-danger btn-sm">-</button>
-            </div>
-        @empty
-            <div>Votre panier est vide.</div>
-        @endforelse
-    </div>
+<!-- resources/views/livewire/panier.blade.php -->
+<div>
+    <h4>🛒 Panier</h4>
+    @forelse($panier as $item)
+        <p>
+            {{ $item['nom'] }} - {{ $item['quantite'] }} x {{ number_format($item['prix'], 0, ',', ' ') }} Ar
+        </p>
+    @empty
+        <p>Aucun article dans le panier</p>
+    @endforelse
 </div>

@@ -3,37 +3,28 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-
+use App\Models\Menu;
 class Panier extends Component
 {
 
     public $panier = [];
 
-    protected $listeners = ['ajouterAuPanier'];
+    protected $listeners = ['panierMisAJour' => 'actualiserPanier'];
 
-    public function ajouterAuPanier($menuId)
+    public function mount()
     {
-        if (!isset($this->panier[$menuId])) {
-            $this->panier[$menuId] = 1;
-        } else {
-            $this->panier[$menuId]++;
-        }
+        $this->actualiserPanier();
     }
 
-    public function retirerDuPanier($menuId)
+    public function actualiserPanier()
     {
-        if (isset($this->panier[$menuId])) {
-            $this->panier[$menuId]--;
-            if ($this->panier[$menuId] <= 0) {
-                unset($this->panier[$menuId]);
-            }
-        }
+        
+        $this->panier = session()->get('panier', []);
     }
 
     public function render()
     {
-        $articles = Menu::find(array_keys($this->panier));
-        return view('livewire.panier', compact('articles'));
+        return view('livewire.panier');
     }
 
 }
