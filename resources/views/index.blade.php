@@ -13,10 +13,10 @@
             <h2 class="mb-4">Nos menus</h2>
             <div class="row">
                 <div class="col-md-8">
-                    <livewire:menu-list />
+                    @livewire('menu-list')
                 </div>
                 <div class="col-md-4">
-                    <livewire:panier />
+                    @livewire('panier')
                 </div>
             </div>
         </div>

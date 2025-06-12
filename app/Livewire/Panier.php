@@ -7,19 +7,20 @@ use App\Models\Menu;
 class Panier extends Component
 {
 
-    public $panier = [];
+    public $items = [];
 
-    protected $listeners = ['panierMisAJour' => 'actualiserPanier'];
+    protected $listeners = ['ajouterAuPanier' => 'ajouter'];
 
-    public function mount()
+    public function ajouter($menuId)
     {
-        $this->actualiserPanier();
-    }
+        $menu = Menu::find($menuId);
+        if (!$menu) return;
 
-    public function actualiserPanier()
-    {
-        
-        $this->panier = session()->get('panier', []);
+        $this->items[$menuId] = [
+            'nom' => $menu->nom,
+            'prix' => $menu->prix,
+            'quantite' => isset($this->items[$menuId]) ? $this->items[$menuId]['quantite'] + 1 : 1,
+        ];
     }
 
     public function render()
