@@ -14,15 +14,11 @@ class MenuSeeder extends Seeder
     public function run(): void
     {
         Menu::create([
-        'nom' => 'Pizza Fromage',
-        'prix' => 25000,
-        'image' => 'pizza.jpg',
+            'name' => 'Pizza Margherita',
+            'description' => 'Tomate, mozzarella, basilic',
+            'price' => 9000,
+            'image' => 'pizza.jpg'
         ]);
 
-        Menu::create([
-            'nom' => 'Burger Classique',
-            'prix' => 20000,
-            'image' => 'burger.jpg',
-        ]);
         }
 }

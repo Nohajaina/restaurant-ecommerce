@@ -7,9 +7,15 @@ use App\Models\Menu;
 class MenuList extends Component
 {
 
+    public $menus;
+
+    public function mount()
+    {
+        $this->menus = Menu::all();
+    }
+
     public function render()
     {
-        $menus = Menu::all();
-        return view('livewire.menu-list', compact('menus'));
+        return view('livewire.menu-list');
     }
 }

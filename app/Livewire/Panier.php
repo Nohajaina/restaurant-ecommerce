@@ -9,18 +9,12 @@ class Panier extends Component
 
     public $items = [];
 
-    protected $listeners = ['ajouterAuPanier' => 'ajouter'];
+    protected $listeners = ['addToCart'];
 
-    public function ajouter($menuId)
+    public function addToCart($menuId)
     {
         $menu = Menu::find($menuId);
-        if (!$menu) return;
-
-        $this->items[$menuId] = [
-            'nom' => $menu->nom,
-            'prix' => $menu->prix,
-            'quantite' => isset($this->items[$menuId]) ? $this->items[$menuId]['quantite'] + 1 : 1,
-        ];
+        $this->items[] = $menu;
     }
 
     public function render()
