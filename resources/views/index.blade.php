@@ -25,7 +25,7 @@
    </section> --}}
    <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
         <div class="md:col-span-2">
-            <livewire:menu-list />
+            @livewire('menu-list') 
         </div>
         <div>
             <livewire:panier />

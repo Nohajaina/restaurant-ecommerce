@@ -11,14 +11,14 @@
 </head>
 <body>
   <header>
-      <nav class="bg-gradient-to-r from-slate-800 to-slate-700 text-white shadow-lg p-2 flex">
-        <a href="" class="flex-auto bg-white"></a>
-        <ul class="flex-1 flex justify-around bg-stone-500">
-			<li>Home</li>
-			<li>About</li>
-			<li>Product</li>
-			<li>Blog</li>
-			<li>Contact</li>
+      <nav class="bg-gradient-to-r from-slate-800 to-slate-700 text-white shadow-lg py-5 flex">
+        <a href="" class="flex-auto   text-center">Mon logo</a>
+        <ul class="flex-1 flex justify-around">
+            <li>Home</li>
+            <li>About</li>
+            <li>Product</li>
+            <li>Blog</li>
+            <li>Contact</li>
         </ul>
 		<div class="flex-1 bg-white">
 			
