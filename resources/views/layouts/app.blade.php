@@ -20,13 +20,14 @@
             <li>Blog</li>
             <li>Contact</li>
         </ul>
-		<div class="flex-1 bg-white">
+		<div class="flex-1">
 			
 		</div>
       </nav>
   </header>
-
-    @yield('section')
+  <main>
+        @yield('section')
+  </main>
     <script src="{{asset('assets/js/jquery-3.5.1.js')}}"></script>
     <script src="{{asset('assets/boxicons-master/dist/boxicons.js')}}"></script>
     @livewireScripts

@@ -14,6 +14,11 @@ class MenuList extends Component
         $this->menus = Menu::all();
     }
 
+    public function addToCart($menuId)
+    {
+        $this->emit('menuAdded', $menuId);
+    }
+
     public function render()
     {
         return view('livewire.menu-list');
