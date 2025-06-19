@@ -16,7 +16,7 @@ class MenuList extends Component
 
     public function addToCart($menuId)
     {
-        $this->emit('menuAdded', $menuId);
+        $this->dispatch('menuAdded', $menuId);
     }
 
     public function render()
