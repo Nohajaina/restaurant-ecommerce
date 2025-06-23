@@ -1,8 +1,10 @@
 @extends('layouts.app',[$title="Accueil"])
 @section("section")
-   <section class="banner flex justify-center items-center">
-        <div class="banner-content">
-            <h2 class="text-white">Commandez en Ligne, Savourez en Paix</h2>
+   <section class="relative h-[600px] bg-cover bg-center" style="background-image: url('/assets/img/burger.jpg')">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <h1 class="text-white text-3xl font-bold">Bienvenue sur TastyFood</h1>
         </div>
    </section>
    <div class="box"></div>
