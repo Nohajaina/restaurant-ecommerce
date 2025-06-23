@@ -5,7 +5,7 @@
         <div class="flex justify-between items-center border-b py-2">
             <div>
                 <p class="font-semibold">{{ $item['name'] }}</p>
-                <p class="text-sm text-gray-500">{{ $item['price'] }} Ar</p>
+                <p class="text-sm text-gray-500">{{ $item['total_price'] }} Ar</p>
             </div>
 
             <div class="flex items-center gap-2">

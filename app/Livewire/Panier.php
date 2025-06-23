@@ -20,11 +20,13 @@ class Panier extends Component
         // Si déjà dans le panier → ajouter +1
         if (isset($this->items[$menuId])) {
             $this->items[$menuId]['quantity'] += 1;
+            $this->items[$menuId]['total_price'] = $this->items[$menuId]['unit_price'] * $this->items[$menuId]['quantity'];
         } else {
             $this->items[$menuId] = [
                 'id' => $menu->id,
                 'name' => $menu->name,
-                'price' => $menu->price,
+                'unit_price' => $menu->price,
+                'total_price' => $menu->price,
                 'quantity' => 1
             ];
         }
@@ -34,6 +36,7 @@ class Panier extends Component
     {
         if (isset($this->items[$menuId])) {
             $this->items[$menuId]['quantity']++;
+            $this->items[$menuId]['total_price'] = $this->items[$menuId]['unit_price'] * $this->items[$menuId]['quantity'];
         }
     }
 
@@ -41,6 +44,7 @@ class Panier extends Component
     {
         if (isset($this->items[$menuId]) && $this->items[$menuId]['quantity'] > 1) {
             $this->items[$menuId]['quantity']--;
+             $this->items[$menuId]['total_price'] = $this->items[$menuId]['unit_price'] * $this->items[$menuId]['quantity'];
         } else {
             unset($this->items[$menuId]);
         }

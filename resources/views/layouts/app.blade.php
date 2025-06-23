@@ -14,11 +14,11 @@
       <nav class="bg-gradient-to-r from-slate-800 to-slate-700 text-white shadow-lg py-5 flex">
         <a href="" class="flex-auto   text-center">Mon logo</a>
         <ul class="flex-1 flex justify-around">
-            <li>Home</li>
-            <li>About</li>
-            <li>Product</li>
-            <li>Blog</li>
-            <li>Contact</li>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
 		<div class="flex-1">
 			
