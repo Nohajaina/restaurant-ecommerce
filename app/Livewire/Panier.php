@@ -30,8 +30,10 @@ class Panier extends Component
                 'quantity' => 1
             ];
         }
+        session()->put('cart', $this->items);
     }
 
+    
     public function increment($menuId)
     {
         if (isset($this->items[$menuId])) {
@@ -54,5 +56,7 @@ class Panier extends Component
     {
         return view('livewire.panier');
     }
+
+    
 
 }
