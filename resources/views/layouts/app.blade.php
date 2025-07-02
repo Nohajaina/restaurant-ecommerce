@@ -13,7 +13,7 @@
   <header>
       <nav class="bg-gradient-to-r from-slate-800 to-slate-700 text-white shadow-lg py-5 flex justify-around">
         <a href="" class="text-center">Mon logo</a>
-        <ul class="flex justify-around">
+        <ul class="flex gap-20">
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Product</a></li>
@@ -21,7 +21,7 @@
             <li><a href="">Contact</a></li>
         </ul>
 		<div class="">
-            <livewire:panier-icon />
+            <livewire:panier-icon/>
         </div>
       </nav>
   </header>

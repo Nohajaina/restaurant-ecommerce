@@ -10,7 +10,10 @@ class Panier extends Component
    public $items = [];
 
     protected $listeners = ['menuAdded'];
-
+    public function mount()
+    {
+        $this->items = session()->get('cart', []);
+    }
     public function menuAdded($menuId)
     {
         $menu = Menu::find($menuId);
@@ -30,7 +33,9 @@ class Panier extends Component
                 'quantity' => 1
             ];
         }
+
         session()->put('cart', $this->items);
+         $this->dispatch('cartUpdated');
     }
 
     
@@ -40,6 +45,9 @@ class Panier extends Component
             $this->items[$menuId]['quantity']++;
             $this->items[$menuId]['total_price'] = $this->items[$menuId]['unit_price'] * $this->items[$menuId]['quantity'];
         }
+
+        session()->put('cart', $this->items);
+         $this->dispatch('cartUpdated');
     }
 
     public function decrement($menuId)
@@ -50,6 +58,8 @@ class Panier extends Component
         } else {
             unset($this->items[$menuId]);
         }
+        session()->put('cart', $this->items);
+         $this->dispatch('cartUpdated');
     }
 
     public function render()

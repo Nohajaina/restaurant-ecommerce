@@ -6,16 +6,17 @@ use Livewire\Component;
 
 class PanierIcon extends Component
 {
-     public $items = [];
 
-    protected $listeners = ['menuAdded' => 'updatePanier'];
+    public $items = [];
+
+    protected $listeners = ['cartUpdated' => 'refreshCart'];
 
     public function mount()
     {
         $this->items = session()->get('cart', []);
     }
 
-    public function updatePanier($menuId)
+    public function refreshCart()
     {
         $this->items = session()->get('cart', []);
     }
