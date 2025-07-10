@@ -3,7 +3,7 @@
         <div class="bg-white p-4 rounded-xl shadow">
             <h2 class="text-xl font-bold">{{ $menu->name }}</h2>
             <p class="text-gray-600 text-sm">{{ $menu->description }}</p>
-            <p class="text-green-600 font-semibold">{{ $menu->price }} Ar</p>
+            <p class="text-green-600 font-semibold">{{ number_format($menu->price, 0, ',', ' ') }} Ar</p>
             <button
                 wire:click="addToCart({{ $menu->id }})"
                 class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 mt-2 rounded">

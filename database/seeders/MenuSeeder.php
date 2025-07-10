@@ -20,5 +20,12 @@ class MenuSeeder extends Seeder
             'image' => 'pizza.jpg'
         ]);
 
+        Menu::create([
+            'name' => 'Pizza Simple',
+            'description' => 'Tomate, mozzarella, basilic',
+            'price' => 10000,
+            'image' => 'pizza.jpg'
+        ]);
+
         }
 }
