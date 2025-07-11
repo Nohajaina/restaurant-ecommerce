@@ -1,5 +1,5 @@
 <div class="relative inline-block">
-    <a href="#" class="text-white text-xl">
+    <a href="{{route('panier')}}" class="text-white text-xl">
         <i class='bx bx-cart bx-sm'></i>
     </a>
     @if ($totalQuantity >= 0)
